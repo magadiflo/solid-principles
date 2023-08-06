@@ -23,6 +23,11 @@ Los siguientes cinco conceptos conforman nuestros principios SOLID:
    debería tener una razón para cambiar**.
 
 2. **O**pen/Closed
+   > El principio de abierto/cerrado establece que **las clases deben estar abiertas para la extensión pero cerradas
+   para la modificación**. Al hacerlo, nos detenemos de modificar el código existente y causar nuevos errores
+   potenciales en una aplicación feliz. Por supuesto, **la única excepción a la regla es cuando se corrigen errores en
+   el código existente.**
+
 3. **L**iskov Substitution
 4. **I**nterface Segregation
 5. **D**ependency Inversion
