@@ -221,3 +221,16 @@ El principio de responsabilidad única se trata de funciones y clases, pero reap
 niveles más. A nivel de componentes, se convierte en el Principio de Cierre Común. A nivel arquitectónico, se convierte
 en el Eje de Cambio responsable de la creación de Límites Arquitectónicos.
 
+## OCP: The Open-Closed Principle
+
+> Un artefacto de software debe estar **abierto para extensión pero cerrado para modificación.**
+
+En otras palabras, el comportamiento de un artefacto de software debería ser extensible, sin tener que modificar ese
+artefacto.
+
+### CONCLUSIÓN
+
+El objetivo es hacer que el sistema sea fácil de extender sin incurrir en un alto impacto de cambio. Este objetivo se
+logra dividiendo el sistema en componentes y organizando esos componentes en una jerarquía de dependencia que protege
+los componentes de nivel superior de los cambios en los componentes de nivel inferior.
+
