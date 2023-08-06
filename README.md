@@ -29,6 +29,21 @@ Los siguientes cinco conceptos conforman nuestros principios SOLID:
    el código existente.**
 
 3. **L**iskov Substitution
+   > Esto significa que **cada subclase o clase derivada debe ser sustituible por su clase base o padre.** En pocas
+   palabras, **si la clase A es un subtipo de clase B, deberíamos poder reemplazar B con A sin interrumpir el
+   comportamiento de nuestro programa.**
+
+   **Veamos la violación de este principio:**
+
+![baeldung-violacion-liskov.png](./assets/baeldung-violacion-liskov.png)
+
+Al incluir un automóvil sin motor en la mezcla, estamos cambiando inherentemente el comportamiento de nuestro programa.
+**Esta es una violación flagrante de la sustitución de Liskov y es un poco más difícil de arreglar que nuestros dos
+principios anteriores.**
+
+Una posible solución sería volver a trabajar nuestro modelo en interfaces que tengan en cuenta el estado sin motor de
+nuestro automóvil.
+
 4. **I**nterface Segregation
 5. **D**ependency Inversion
 
