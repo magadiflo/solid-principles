@@ -45,5 +45,8 @@ Una posible solución sería volver a trabajar nuestro modelo en interfaces que 
 nuestro automóvil.
 
 4. **I**nterface Segregation
+   > Significa que **las interfaces más grandes deben dividirse en otras más pequeñas. Al hacerlo, podemos asegurarnos
+   de que las clases de implementación solo deben preocuparse por los métodos que les interesan.**
+
 5. **D**ependency Inversion
 
