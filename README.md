@@ -49,4 +49,7 @@ nuestro automóvil.
    de que las clases de implementación solo deben preocuparse por los métodos que les interesan.**
 
 5. **D**ependency Inversion
+   > **Los componentes deben depender de abstracciones, no de concreciones.** Se refiere al desacoplamiento de los
+   módulos de software. De esta manera, en lugar de módulos de alto nivel dependiendo de módulos de bajo nivel, ambos
+   dependerán de abstracciones.
 
