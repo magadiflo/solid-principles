@@ -53,3 +53,33 @@ nuestro automóvil.
    módulos de software. De esta manera, en lugar de módulos de alto nivel dependiendo de módulos de bajo nivel, ambos
    dependerán de abstracciones.
 
+---
+
+## [Libro: Clean Architecture - Robert C. Martin](https://github.com/sdcuike/Clean-Code-Collection-Books/blob/master/Clean.Architecture.2017.9.pdf)
+
+## Principios de Diseño SOLID
+
+**Resumen:**
+
+- **SRP:** The Single Responsibility Principle  
+  Cada módulo de software tiene una, y solo una, razón para cambiar.
+
+
+- **OCP:** The Open-Closed Principle  
+  Los sistemas de software deben estar diseñados para permitir que el comportamiento de esos sistemas cambie agregando
+  código nuevo, en lugar de cambiar el código existente.
+
+
+- **LSP:** The Liskov Substitution Principle  
+  Este principio dice que para construir sistemas de software a partir de partes intercambiables, esas partes deben
+  adherirse a un contrato que permite que esas partes se sustituyan entre sí.
+
+
+- **ISP:** The Interface Segregation Principle  
+  Este principio aconseja a los diseñadores de software que eviten depender de cosas que no usan.
+
+
+- **DIP:** The Dependency Inversion Principle  
+  El código que implementa la política de alto nivel no debe depender del código que implementa los detalles de bajo
+  nivel. Más bien, los detalles deberían depender de las políticas.
+
