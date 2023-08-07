@@ -298,3 +298,22 @@ no hará que el Usuario1 sea recompilado y reimplementado.
 
 ![ca-isp-figure-1.1.png](./assets/ca-isp-figure-1.1.png)
 
+## DIP: The Dependency Inversion Principle
+
+El Principio de Inversión de Dependencia (DIP) nos dice que **los sistemas más flexibles son aquellos en los que las
+dependencias del código fuente se refieren solo a abstracciones, no a concreciones.**
+
+En un lenguaje de tipo estático, como Java, esto significa que **las declaraciones de uso, importación e inclusión deben
+referirse solo a los módulos fuente que contienen interfaces, clases abstractas o algún otro tipo de declaración
+abstracta.** ``No se debe depender de nada concreto.``
+
+En comparación, la clase String es muy estable. Los cambios a esa clase son muy raros y están estrictamente controlados.
+Los programadores y arquitectos no tienen que preocuparse por cambios frecuentes y caprichosos en String.
+
+Por estas razones, tendemos a ignorar los antecedentes estables del sistema operativo y las instalaciones de la
+plataforma cuando se trata de DIP. Toleramos esas dependencias concretas porque sabemos que podemos confiar en que no
+cambiarán.
+
+**Son los elementos concretos volátiles de nuestro sistema de los que queremos evitar depender.** Esos son los módulos
+que estamos desarrollando activamente y que están experimentando cambios frecuentes.
+
