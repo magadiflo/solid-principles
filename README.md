@@ -275,3 +275,26 @@ que utiliza, dichos tipos no son sustituibles.
 
 El LSP puede y debe extenderse al nivel de la arquitectura. Una simple violación de la sustituibilidad puede causar que
 la arquitectura de un sistema se contamine con una cantidad significativa de mecanismos adicionales
+
+## ISP: The Interface Segregation Principle
+
+El Principio de Segregación de Interfaz (ISP) deriva su nombre del diagrama que se muestra en la Figura 10.1.
+
+![ca-isp-figure-1.0.png](./assets/ca-isp-figure-1.0.png)
+
+En la situación ilustrada en la Figura 10.1, hay varios usuarios que utilizan las operaciones de la clase OPS.
+Supongamos que User1 usa solo op1, User2 usa solo op2 y User3 usa solo op3.
+
+Ahora imagina que OPS es una clase escrita en un lenguaje como Java. Claramente, en ese caso, el código fuente del
+Usuario1 dependerá inadvertidamente de op2 y op3, aunque no los llame. Esta dependencia significa que un cambio en el
+código fuente de op2 en OPS forzará a User1 a ser recompilado y reimplementado, aunque nada de lo que le importaba
+realmente haya cambiado.
+
+Este problema **se puede resolver segregando las operaciones en interfaces** como se muestra en la Figura 10.2.
+
+Nuevamente, si imaginamos que esto se implementa en un lenguaje de tipo estático como Java, entonces el código fuente de
+User1 dependerá de U1Ops y op1, pero no dependerá de OPS. Por lo tanto, un cambio en OPS que no le importe al Usuario1
+no hará que el Usuario1 sea recompilado y reimplementado.
+
+![ca-isp-figure-1.1.png](./assets/ca-isp-figure-1.1.png)
+
