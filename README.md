@@ -234,3 +234,44 @@ El objetivo es hacer que el sistema sea fácil de extender sin incurrir en un al
 logra dividiendo el sistema en componentes y organizando esos componentes en una jerarquía de dependencia que protege
 los componentes de nivel superior de los cambios en los componentes de nivel inferior.
 
+## LSP: The Liskov Substitution Principle
+
+Para entender esta idea, que se conoce como Principio de Sustitución de Liskov (LSP), veamos algunos ejemplos.
+
+### Guía del uso de la herencia
+
+Imagine que tenemos una clase llamada Licencia, como se muestra en la Figura 9.1. Esta clase tiene un método denominado
+calcFee(), al que llama la aplicación Billing (Facturación). Hay dos "subtipos" de Licencia: PersonalLicense y
+BusinessLicense. Utilizan diferentes algoritmos para calcular la tarifa de la licencia.
+
+![ca-lsp-example-1.0.png](./assets/ca-lsp-example-1.0.png)
+
+**Este diseño se ajusta al LSP** porque el comportamiento de la aplicación Billing (Facturación) no depende, en modo
+alguno, de cuál de los dos subtipos utilice. Ambos subtipos son sustituibles por el tipo de Licencia.
+
+### El problema del cuadrado/rectángulo
+
+El ejemplo canónico de una violación del LSP es el famoso problema cuadrado/rectángulo (Figura 9.2).
+
+![ca-lsp-example-1.1.png](./assets/ca-lsp-example-1.1.png)
+
+En este ejemplo, Square no es un subtipo adecuado de Rectangle porque la altura y el ancho de Rectangle son mutables de
+forma independiente; en contraste, la altura y el ancho del Cuadrado deben cambiar juntos. Dado que el Usuario cree que
+se está comunicando con un Rectángulo, podría confundirse fácilmente. El siguiente código muestra por qué:
+
+````
+Rectangle r = …
+r.setW(5);
+r.setH(2);
+assert(r.area() == 10);
+If the … code produced a Square, then the assertion would fail.
+````
+
+La única forma de defenderse contra este tipo de violación de LSP es agregar mecanismos al Usuario (como una declaración
+if) que detecte si el Rectángulo es, de hecho, un Cuadrado. Dado que el comportamiento del Usuario depende de los tipos
+que utiliza, dichos tipos no son sustituibles.
+
+### CONCLUSIÓN
+
+El LSP puede y debe extenderse al nivel de la arquitectura. Una simple violación de la sustituibilidad puede causar que
+la arquitectura de un sistema se contamine con una cantidad significativa de mecanismos adicionales
